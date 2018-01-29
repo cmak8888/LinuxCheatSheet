@@ -1,7 +1,9 @@
 
 Alias [command] = "[command -extension]"
 
-
+cat [filename]
+  - Reads contents
+  
 cd [directory]
   - Goes into directory
   
@@ -13,7 +15,25 @@ ls [-a]
     [-a]
       - Include hidden files
  
- vim 
+mkdir [name]
+  - Makes a new directory with the given name
+  
+mv [directory] [destination]
+
+rm [filename] [-f] [-r]
+  - Delete a file
+    [-f]
+      - Force Deletes
+    [-r]
+      - Deletes directories and contents directories
+rmdir [directory]
+  - Delete an empty directory
+
+touch [filename]
+  - Creates an empty file
+  - Updates current time as last modified timestamp
+
+vim 
   -Text editor
  
 ~./bashrc
