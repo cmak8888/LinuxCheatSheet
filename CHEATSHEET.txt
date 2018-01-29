@@ -1,24 +1,46 @@
 
 Alias [command] = "[command -extension]"
 
+apropos [keyword]
+  - Searches through keyword
+
 cat [filename]
   - Reads contents
   
 cd [directory]
   - Goes into directory
   
+clear
+  -Clears Screen
+  
 dir
   -shows directories
+
+find [directory] [-name] "[filename.extension]"
+  - Displays path to filename.
+    [-name]
+      -Searches for a name
+    [~]
+      -Full directory path
+
+less
+  - Simple format
 
 ls [-a]
   - List files
     [-a]
       - Include hidden files
+
+man [ .. ]
+  - Opens Manual
  
 mkdir [name]
   - Makes a new directory with the given name
   
 mv [directory] [destination]
+
+pwd
+  - Print Working Directory
 
 rm [filename] [-f] [-r]
   - Delete a file
