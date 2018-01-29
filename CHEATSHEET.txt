@@ -51,6 +51,9 @@ rm [filename] [-f] [-r]
 rmdir [directory]
   - Delete an empty directory
 
+tar [-cgz] [director[ies]]
+  - Compress files & Folders
+
 touch [filename]
   - Creates an empty file
   - Updates current time as last modified timestamp
