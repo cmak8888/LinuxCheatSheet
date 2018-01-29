@@ -1,0 +1,22 @@
+
+Alias [command] = "[command -extension]"
+
+
+cd [directory]
+  - Goes into directory
+  
+dir
+  -shows directories
+
+ls [-a]
+  - List files
+    [-a]
+      - Include hidden files
+ 
+ vim 
+  -Text editor
+ 
+~./bashrc
+  -rc means runcommands
+  -runs commands at the start of the session
+  
