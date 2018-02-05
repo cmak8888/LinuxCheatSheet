@@ -16,15 +16,9 @@ clear
 dir
   -shows directories
 
-echo [< | << | > | >>] [file]
+echo [Redirects] [file]
   - Output
-  [<]
-    - Redirects Output to a file
-    - Overrides contents
-    - Creates file if nonexistent
-  [<<]
-    - Appends contents of output to end of file on a new line
-
+  
 file
   - Lists files with file type
 
@@ -94,3 +88,13 @@ wget
   -rc means runcommands
   -runs commands at the start of the session
   
+[Redirects]
+  - < | << | > | >> | 2<
+  [<]
+    - Redirects Output to a file
+    - Overrides contents
+    - Creates file if nonexistent
+  [<<]
+    - Appends contents of output to end of file on a new line
+  [2<]
+    - Redirects the Error
