@@ -16,8 +16,14 @@ clear
 dir
   -shows directories
 
-echo
+echo [< | << | > | >>] [file]
   - Output
+  [<]
+    - Redirects Output to a file
+    - Overrides contents
+    - Creates file if nonexistent
+  [<<]
+    - Appends contents of output to end of file on a new line
 
 file
   - Lists files with file type
@@ -74,9 +80,12 @@ touch [filename]
 vim 
   -Text editor
  
-wc
+wc [-l] [Redirects]
   - Stands for word count
   - Prints Line count, Word count, byte count
+  [-l]
+  - With redirect, it displays contents of current input
+  - Ctrl D will end with printing it.
  
 wget
   - Downloads a file from the internet.
