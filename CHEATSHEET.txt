@@ -16,6 +16,12 @@ clear
 dir
   -shows directories
 
+echo
+  - Output
+
+file
+  - Lists files with file type
+
 find [directory] [-name] "[filename.extension]"
   - Displays path to filename.
     [-name]
@@ -26,10 +32,12 @@ find [directory] [-name] "[filename.extension]"
 less
   - Simple format
 
-ls [-a]
+ls [-a] [-l]
   - List files
     [-a]
       - Include hidden files
+    [-l]
+      - Shows the Modify date.
 
 man [ .. ]
   - Opens Manual
@@ -51,6 +59,11 @@ rm [filename] [-f] [-r]
 rmdir [directory]
   - Delete an empty directory
 
+stat
+  - Details file details and statistics
+  - Date Made/Modified
+
+
 tar [-cgz] [director[ies]]
   - Compress files & Folders
 
@@ -60,6 +73,13 @@ touch [filename]
 
 vim 
   -Text editor
+ 
+wc
+  - Stands for word count
+  - Prints Line count, Word count, byte count
+ 
+wget
+  - Downloads a file from the internet.
  
 ~./bashrc
   -rc means runcommands
