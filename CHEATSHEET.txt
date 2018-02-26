@@ -110,8 +110,16 @@ wget
     - Skips/returns empty string
   - CTRL Z
     - Pauses/suspends the process
-  - CTRL G
-    - Continues the process
+  - CTRL [Some Character]
+  
+  - CTRL J
+    - New line character
+  - CTRL I
+    - Same as Tab
+  - CTRL R [command]
+    - Reverse Search
+    - Reverse search for previous ran command
+  - A-Z is the same as ASCII 1-26
 [Redirects]
   - < | << | > | >> | 2<
   [<]
@@ -130,3 +138,16 @@ wget
     - Signal Stop
   -SIGCONT
     - Signal Continue
+$ [? | 0-... | @ | #]
+  - Parameter expansion
+  [?]
+    - return status of a previous command
+  [0,1-...]
+    [0]
+      - File name
+    [1...]
+      - Arguments
+  [#]
+    - Shows number of arguments passed by an program
+Bashing
+  -while ___; do
