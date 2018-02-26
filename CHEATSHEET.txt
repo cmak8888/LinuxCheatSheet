@@ -19,6 +19,15 @@ dir
 echo [Redirects] [file]
   - Output
   
+export
+  - Creates an environment variable on the server
+  
+env
+  - Lists environmental variables
+  
+fg
+  - Continues paused/suspended process
+  
 file
   - Lists files with file type
 
@@ -28,6 +37,8 @@ find [directory] [-name] "[filename.extension]"
       -Searches for a name
     [~]
       -Full directory path
+kill [id]
+  - Kills a process based on the ID
 
 less
   - Simple format
@@ -46,6 +57,9 @@ mkdir [name]
   - Makes a new directory with the given name
   
 mv [directory] [destination]
+
+pidof
+  - Determines Process id of ___
 
 pwd
   - Print Working Directory
@@ -88,6 +102,16 @@ wget
   -rc means runcommands
   -runs commands at the start of the session
   
+*Control Signals
+  - CTRL C
+    -Sends signal interrupt to interrupt a process
+  - CTRL D
+    - Disconnect Keyboard/Input
+    - Skips/returns empty string
+  - CTRL Z
+    - Pauses/suspends the process
+  - CTRL G
+    - Continues the process
 [Redirects]
   - < | << | > | >> | 2<
   [<]
@@ -98,3 +122,11 @@ wget
     - Appends contents of output to end of file on a new line
   [2<]
     - Redirects the Error
+
+*Signals
+  - SIGINT
+    - Signal Interrupt
+  - SIGSTOP
+    - Signal Stop
+  -SIGCONT
+    - Signal Continue
