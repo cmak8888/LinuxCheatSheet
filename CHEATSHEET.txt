@@ -151,3 +151,31 @@ $ [? | 0-... | @ | #]
     - Shows number of arguments passed by an program
 Bashing
   -while ___; do
+
+Conditional:
+  test, []
+    - returns true or false
+  if <>; then ... fi
+  
+  case "$key" in
+  [options]
+  esac
+FOR STATEMENTS:  
+  for <variable> in [List]
+  do
+    <...>
+  done
+  Quotes does strings
+  no quotes are just the variables (no spaces)
+  
+  for i in {0 .. 12}
+  do <...>
+  done
+  
+  for file in *     #Looks through everything
+  do <...>
+  done
+   
+  
+  
+  
