@@ -136,6 +136,19 @@ tar [-cgz] [director[ies]]
 touch [filename]
   - Creates an empty file
   - Updates current time as last modified timestamp
+  
+tr [OPTION] SET1 SET2
+  - translate
+  - Translates SET1 into SET2
+  -c
+    - Complements a set of characters in a string
+  -d 
+    - Deletes characters in the first set from the output
+  -s 
+    - Replaces repeated characters listed in Set1 with single occurence
+  -t
+    - Truncates Set1
+  
 
 vim 
   -Text editor
@@ -229,5 +242,8 @@ FOR STATEMENTS:
   done
    
   
+| 
+  - Pipelining
+  - Feeds output on the left as input to the right
   
   
