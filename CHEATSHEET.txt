@@ -37,6 +37,23 @@ find [directory] [-name] "[filename.extension]"
       -Searches for a name
     [~]
       -Full directory path
+
+grep [OPTIONS] PATTERN [FILE...]
+  - matching a regular expression against text in a file, multiple files, or a stream of input.
+    It searches for the PATTERN of text.
+  --color
+    - Highlights the option
+  -n 
+    - Include Line number
+  -i
+    - case insensitive
+  -r
+    - recursive search
+    - searches in subdirectories
+  -f
+    - Exact string only
+    Shortcut: fgrep
+      
 kill [id]
   - Kills a process based on the ID
 
