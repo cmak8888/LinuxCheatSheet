@@ -90,6 +90,41 @@ rm [filename] [-f] [-r]
 rmdir [directory]
   - Delete an empty directory
 
+sed [options] COMMANDS [file-to-edit]
+  - operations performed line by line
+  Ex:
+    - sed '' NAME-OF-FILE
+    - Passes in edit nothing so it prints each line to standard output
+    - cat NAME-OF-FILE | sed ''
+  'p'
+    - Explicit print command.
+    Ex: sed 'p' NAME-OF-FILE
+      - prints contents twice,
+      - implicitly prints once, p prints again.
+  '1p'
+    - prints only the first line
+  '1,5p'
+    - prints lines 1-5 (5 lines)
+  '1,+4p'
+    - prints 1-5 using an offset
+  '1~2p'
+    - prints every other line. with ~ being the interval
+  'd'
+    - delete text
+  -n
+    - supresses automatic printing
+  's/old_word/new_word'
+    - substitues old_word text with new_word text
+    - only works on the first word it finds
+  's/old_word/new_word/g'
+    - g flag
+    - replaces every instance
+  's/old_wrd/new_word/2'
+    - Changes only the 2nd instance.
+    
+    
+  
+
 stat
   - Details file details and statistics
   - Date Made/Modified
