@@ -159,6 +159,8 @@ wc [-l] [Redirects]
   [-l]
   - With redirect, it displays contents of current input
   - Ctrl D will end with printing it.
+  [-c]
+  - Prints byte count
  
 wget
   - Downloads a file from the internet.
