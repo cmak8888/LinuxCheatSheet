@@ -392,6 +392,8 @@ occurrence.
 -i ignores case
 -u only prints unique lines
 
+/dev/null sends nothing, it sends null.
+
 
 Hard Links
   ln ./file1 ./file2 
