@@ -54,6 +54,13 @@ grep [OPTIONS] PATTERN [FILE...]
     - Exact string only
     Shortcut: fgrep
       
+Inodes: 
+      - An inode (index node) is a data structure on a traditional Unix-style file system. It stores basic
+information about a file, directory, or other file system object. Each object in the filesystem is associated
+with an inode.
+      ls -i
+        view Inode
+      stat
 kill [id]
   - Kills a process based on the ID
 
@@ -121,8 +128,15 @@ sed [options] COMMANDS [file-to-edit]
     - replaces every instance
   's/old_wrd/new_word/2'
     - Changes only the 2nd instance.
+    - If you have a large number of sed commands, you can put them into a file and use:
+sed -f sedscript <old >new
+where sedscript could look like this:
+- & means string found
     
-    
+    Let’s make a text file called “example.txt” for our next example:
+apple banana kiwi burger
+orange kiwi pie burger pie berry
+sed ‘s/banana/mango/’ <example.txt >test.txt
   
 
 stat
@@ -152,6 +166,15 @@ tr [OPTION] SET1 SET2
 
 vim 
   -Text editor
+  - v = visual mode
+  - i = insert mode
+  :q Quits vim but fails when file has been editted
+  :w Save the file
+  :w save the file with a new name
+  :wq Save the file and quit
+  :q! Force quit without saving
+  - u undo
+  - CTRL + R = redo
  
 wc [-l] [Redirects]
   - Stands for word count
@@ -248,4 +271,127 @@ FOR STATEMENTS:
   - Pipelining
   - Feeds output on the left as input to the right
   
+  -rwxr-xr.
+  First character. If -, normal file.
+  If d, its a directory.
+  r - Read
+  w - Write
+  X - Execute
   
+next 3 characters are permissions for the owner.
+Middle 3 characters  are for the group. rwx is the order.
+Last 3 characters are everyone else's permissions.
+ls -ld for directories.
+
+chmod
+  - Change the permissions of files or directories. (Change mode"
+  - restricted to file owner or root
+  [-r] change files and directories recursively (within)
+ 
+ chmod u=rwx, g=rx, o=r myfile
+ u means user
+ g means group
+ o means owner.
+ Octal Binary
+0 0 0 0
+1 0 0 1
+2 0 1 0
+3 0 1 1
+4 1 0 0
+5 1 0 1
+6 1 1 0
+7 1 1 1
+chown
+  - Changes the owner and group
+id 
+  - prints user and group info for the specified username (or current user)
+  [-g] Prints only primary group
+  -G prints all group id
+  -n uses group names
+  -u prints user ID
+  -un prints the username
+  
+users
+  -prints the names of all users currently logged in
+who
+  -prints information about all users who are currently logged in.
+  [-a] prints all possible info
+  [-b] diplays the time of last system boot
+  -d displays dead processes
+  -l prints system login processes
+  -m Only print information about the user and host associated with stdin
+  -q Displays all login names and a count
+whoami
+    - prints username of the current user ID
+newgrp
+    - allows user to login to a new group
+    
+chgrp
+  - Changes group ownership of a file/files.
+groupadd
+  -creates a new group
+groupdel
+  -Used by root or superuser to remove a group
+gpasswd
+  -Administers group
+  [-a user] adds a user
+  [-d user]deletes a user
+  -r removes the password
+sudo
+  - superuser do
+su
+  -substitute user do
+  
+sg
+    - different group ID
+    
+umask
+      - shows or sets the mask of certain permissions.
+head
+  - makes it easy to output the beginning of files.
+  Prints the first 10 lines of each file to standard output by default.
+If more than one file, identifies each section of output with a header that contains the filename.
+If no file or - specified, head reads from standard input. For example:
+find | head
+head -n filename will print the first n lines:
+head -5 myfile.py
+head -c n file prints the first n bytes of the file:
+head -c 100 myfile.py
+-q means never print headers, -v means always print headers.
+
+tail
+  - prints last lines of files. 
+  -f output appended data
+  -s sets the refresh rate
+sort
+  - By default:
+    - lines starting with a number will appear before lines starting with a letter;
+    - lines starting with a letter that appears earlier in the alphabet will appear before lines
+starting with a letter that appears later in the alphabet;
+    - lines starting with a lowercase letter will appear before lines starting with the same letter
+in uppercase.
+-r reverses the default sorting
+-R randomly shuffles the lines
+-u shows only one of each line in the sorted list (no duplicate lines. unique)
+
+tee 
+reads from standard input and writes to standard output and to files at the same time.
+It is named after a T-splitter in plumbing because the output goes to two places at once.
+The -a option appends to files instead of overwriting.
+
+uniq, by default, filters out adjacent, matching lines from the input file, writing the filtered data
+to standard out. If no options are specified, matching adjacent lines are merged to the first
+occurrence.
+-c prefixes lines with a number representing how many times they occurred.
+-d will only print duplicated lines
+-i ignores case
+-u only prints unique lines
+
+
+Hard Links
+  ln ./file1 ./file2 
+    Associatees multiple file systems with a single inode.
+    Cannot link directories
+Soft Links
+  ln -s
+    soft links can link directories and cross boundaries. If the source of the link is changed or removed, the soft link is broken.
