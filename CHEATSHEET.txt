@@ -175,6 +175,11 @@ vim
   :q! Force quit without saving
   - u undo
   - CTRL + R = redo
+  - /search_text search doc for text moving forward
+  - ?search_text search doc for text moving backwards
+  :%s/original/replacement/g
+    - Search for all occurrences of original, and replaces with replacement.
+    c flag requires permission/confirmation
  
 wc [-l] [Redirects]
   - Stands for word count
