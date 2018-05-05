@@ -12,6 +12,12 @@ cd [directory]
   
 clear
   -Clears Screen
+cut
+  -cuts out sections of a file.
+  [-b] extract certain number of bytes. List byte numbers with commas. - for ranges.
+  [-c] Cut by character
+  [-f] Field, cut by a delimiter, default is tab.
+  [-d] Specify a different delimiter.
   
 dir
   -shows directories
@@ -50,9 +56,14 @@ grep [OPTIONS] PATTERN [FILE...]
   -r
     - recursive search
     - searches in subdirectories
+    - obtain from file
+    -e is for indicating the pattern you want to match against.
   -f
     - Exact string only
     Shortcut: fgrep
+  -v
+    - Invert Match
+  -c output count of matching lines only
       
 Inodes: 
       - An inode (index node) is a data structure on a traditional Unix-style file system. It stores basic
@@ -180,7 +191,16 @@ vim
   :%s/original/replacement/g
     - Search for all occurrences of original, and replaces with replacement.
     c flag requires permission/confirmation
- 
+  d$ Deletes from current cursor position to the end of the line.
+  x - delete character @ cursor
+  d0 delete to the the beginning of a line
+  d) delete to the end of a sentence
+ dG delete to the end of the file 
+  dgg delete to the beginning of the file
+  dG delete to the end of the file
+  dd delete line
+  ndd delete n lines.
+  
 wc [-l] [Redirects]
   - Stands for word count
   - Prints Line count, Word count, byte count
